@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // Import the express module
 const express = require("express");
 
@@ -8,9 +10,11 @@ const { AwesomeGraphQLClient } = require("awesome-graphql-client");
 const fetch = require("node-fetch");
 
 const client = new AwesomeGraphQLClient({
-  endpoint:
-    "https://api-eu-central-1.hygraph.com/v2/ck8sn5tnf01gc01z89dbc7s0o/master",
+  endpoint: process.env.HYGRAPH_URL,
   fetch,
+  headers: {
+    Authorization: `Bearer ${process.env.HYGRAPH_KEY}`,
+  },
 });
 
 // Set ejs as the template engine
@@ -18,24 +22,34 @@ app.set("view engine", "ejs");
 
 // Create a GET route for the index
 app.get("/", async function (_, res) {
-  // const query = `
-  //     {
-  //       people {
-  //           age
-  //           birthdate
-  //           fullname
-  //           id
-  //           title
-  //           aboutMe {
-  //             html
-  //           }
-  //         }
-  //     }
-  //   `;
+  try {
+    const query = `
+      {
+        people {
+          fullname
+          age
+          birthdate
+          id
+          title
+          aboutMe {
+            text
+          }
+          image {
+            url
+          }
+        }
+      }
+    `;
 
-  // const { people } = await client.request(query);
+    const { people } = await client.request(query);
 
-  res.render("index");
+    res.render("index", { people });
+    console.log(people);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    // Handle the error appropriately, perhaps render an error page
+    res.status(500).send("Error fetching data");
+  }
 });
 
 // Create a POST route for the index
