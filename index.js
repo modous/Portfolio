@@ -18,24 +18,24 @@ app.set("view engine", "ejs");
 
 // Create a GET route for the index
 app.get("/", async function (_, res) {
-  const query = `
-      { 
-        people {
-            age
-            birthdate
-            fullname
-            id
-            title
-            aboutMe {
-              html
-            }
-          }
-      }
-    `;
+  // const query = `
+  //     {
+  //       people {
+  //           age
+  //           birthdate
+  //           fullname
+  //           id
+  //           title
+  //           aboutMe {
+  //             html
+  //           }
+  //         }
+  //     }
+  //   `;
 
-  const { people } = await client.request(query);
+  // const { people } = await client.request(query);
 
-  res.render("index", { people });
+  res.render("index");
 });
 
 // Create a POST route for the index
