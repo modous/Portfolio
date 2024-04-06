@@ -1,0 +1,25 @@
+
+
+.h1-name {
+  padding-top: 30px;
+  margin-top: 0px;
+  color: rgb(255, 255, 253);
+}
+
+.headerback {
+  position: relative;
+}
+
+.title{
+  position: relative;
+  font-size: 20px;
+  color: rgb(253, 255, 230);
+}
+
+.about-me{
+  color: rgb(253, 255, 230);
+}
+
+section{
+  display: flex;
+}

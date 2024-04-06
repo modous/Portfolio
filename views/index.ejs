@@ -1,11 +1,29 @@
 <%- include('./partials/head') %>
 
-<article>
-  <h1><%= people[0].fullname %></h1>
-  <p><%= people[0].birthdate %></p>
+<header class="headerback">
+  <h1 class="h1-name"><%= people[0].fullname %></h1>
+  <div class="social-links">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/" target="_blank">
+        <img src="linkedin-logo.png" alt="LinkedIn" width="50" height="50">
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/" target="_blank">
+        <img src="instagram-logo.png" alt="Instagram" width="50" height="50">
+    </a>
+    <!-- GitHub -->
+    <a href="https://github.com/" target="_blank">
+        <img src="github-logo.png" alt="GitHub" width="50" height="50">
+    </a>
+</div></header>
+<section>
+<article class="title">
   <p><%= people[0].title %></p>
-  <p><%= people[0].aboutMe.text %></p>
-  <img src=" <%= people[0].image.url %>" alt="" />
 </article>
 
+<article class="about-me">
+  <p><%= people[0].aboutMe.text %></p>
+</article>
+
+</section>
 <%- include('./partials/foot') %>

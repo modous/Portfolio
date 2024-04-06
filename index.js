@@ -3,8 +3,21 @@ require("dotenv").config();
 // Import the express module
 const express = require("express");
 
+const path = require("path"); // Import the path module
+
 // Create a new express app
 const app = express();
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "public")));
+
+// Set the appropriate MIME type for CSS files
+app.use((req, res, next) => {
+  if (req.url.endsWith(".css")) {
+    res.type("text/css");
+  }
+  next();
+});
 
 const { AwesomeGraphQLClient } = require("awesome-graphql-client");
 const fetch = require("node-fetch");
