@@ -1,0 +1,11 @@
+<%- include('./partials/head') %>
+<main>
+  <article>
+    <h1><%= people[0].fullname %></h1>
+    <p><%= people[0].birthdate %></p>
+    <p><%= people[0].title %></p>
+    <p><%= people[0].aboutMe.text %></p>
+    <img src=" <%= people[0].image.url %>" alt="" />
+  </article>
+</main>
+<%- include('./partials/foot') %>
