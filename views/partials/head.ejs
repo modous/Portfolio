@@ -5,38 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohamed Portfolio</title>
     <link rel="stylesheet" href="/style.css" />
-     <!-- Font Awesome CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-lxxgZ9L/1RHN2a8DhWi9fe1lUpQ01ASji7Qh8qa23VjBbJ9tacIj3iBM8ItSjC4yMUQpOGTjz5gQlGomOjzt4Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-lxxgZ9L/1RHN2a8DhWi9fe1lUpQ01ASji7Qh8qa23VjBbJ9tacIj3iBM8ItSjC4yMUQpOGTjz5gQlGomOjzt4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       /* Dynamic CSS */
       .background {
-          position: relative; /* Set position relative */
-          background-image: url("<%= people[0].image.url %>");
-          /* Set background properties */
-          background-size: cover; 
-          background-repeat: no-repeat;
-          height: 110vh; 
-          padding: 0;
-          margin: 0px;
-          padding-left: 20px;
+        position: relative; /* Set position relative */
+        background-image: url("<%= people[0].image.url %>");
+        /* Set background properties */
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 110vh;
+        padding: 0;
+        margin: 0px;
+        padding-left: 20px;
       }
 
       /* Pseudo-element to create semi-transparent background */
-     .background {
-      position: relative;
-}
+      .background {
+        position: relative;
+      }
 
-.background::before {
-    content: ""; /* Create a pseudo-element */
-    position: absolute; /* Set position absolute */
-    top: 0; /* Position at the top */
-    left: 0; /* Position at the left */
-    width: 100%; /* Cover the entire width */
-    height: 100%; /* Cover the entire height */
-    background-color: rgba(54, 70, 43, 0.5); /* Semi-transparent background color */
-    z-index: -1; /* Set a lower z-index to keep the pseudo-element behind the content */
-}
-  </style>
+      .background::before {
+        content: ""; /* Create a pseudo-element */
+        position: absolute; /* Set position absolute */
+        top: 0; /* Position at the top */
+        left: 0; /* Position at the left */
+        width: 100%; /* Cover the entire width */
+        height: 100%; /* Cover the entire height */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Semi-transparent background color */
+        z-index: -1; /* Set a lower z-index to keep the pseudo-element behind the content */
+      }
+    </style>
   </head>
-  <body class="background">
-    
+  <body class="background"></body>
+</html>
