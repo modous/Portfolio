@@ -19,10 +19,12 @@
         position: relative; /* Set position relative */
         background-image: url("<%= people[0].image.url %>");
         /* Set background properties */
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-size: cover; /* This property ensures the image covers the entire background */
+  background-position: center; /* This property centers the image */
+  background-repeat: no-repeat; /* This property prevents the image from repeating */
+
         height: 110vh;
-        padding: 0;
+        padding: 0px;
         margin: 0px;
         padding-left: 20px;
       }
@@ -49,5 +51,4 @@
       }
     </style>
   </head>
-  <body class="background"></body>
-</html>
+  <body class="background">
