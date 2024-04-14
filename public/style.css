@@ -1,0 +1,52 @@
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.h1-name {
+  color: rgb(255, 255, 253);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  color: rgb(253, 255, 230);
+  padding-right: 100px;
+}
+
+.about-me {
+  color: rgb(253, 255, 230);
+}
+
+.social-links {
+  padding: 20px;
+}
+
+.link{
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    display: block;
+  }
+  .header {
+    display: block;
+  }
+  .social-links {
+    padding: 10px;
+  }
+  .h1-name{
+    padding-top: 30px;
+    margin-top: 0px;
+  }
+}
