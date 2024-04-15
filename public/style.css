@@ -49,20 +49,20 @@ section {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Include box-shadow in the transition */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .my-button:hover {
   background-color: #000000;
   color: white;
-  transform: scale(1.05); /* Increase the size of the button on hover */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .my-button:active {
-  transform: scale(0.95); /* Decrease the size of the button when clicked */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow when clicked */
+  transform: scale(0.95); 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .copyright{
