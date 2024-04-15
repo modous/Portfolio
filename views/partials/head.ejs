@@ -16,9 +16,9 @@
     <style>
       /* Dynamic CSS */
       .background {
-        position: relative; /* Set position relative */
+        position: relative;
         background-image: url("<%= people[0].image.url %>");
-        /* Set background properties */
+       
         background-size: cover;
         background-repeat: no-repeat;
         height: 110vh;
@@ -33,19 +33,19 @@
       }
 
       .background::before {
-        content: ""; /* Create a pseudo-element */
-        position: absolute; /* Set position absolute */
-        top: 0; /* Position at the top */
-        left: 0; /* Position at the left */
-        width: 100%; /* Cover the entire width */
-        height: 100%; /* Cover the entire height */
+        content: ""; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
         background-color: rgba(
           0,
           0,
           0,
           0.5
-        ); /* Semi-transparent background color */
-        z-index: -1; /* Set a lower z-index to keep the pseudo-element behind the content */
+        ); 
+        z-index: -1; 
       }
     </style>
   </head>
