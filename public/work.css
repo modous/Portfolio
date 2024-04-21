@@ -1,9 +1,11 @@
 .image-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Horizontally center the images */
-  align-items: center; /* Vertically center the images */
+  justify-content: center;
+  align-items: center;
   padding: 50px;
+  background-color: rgb(245, 245, 245);
+  margin: 0px;
 }
 
 /* Ensure images do not exceed their container width */
@@ -11,4 +13,13 @@
 img {
   max-width: 100%;
   padding-bottom: 50px;
+}
+
+.work-title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+body {
+  padding-left: 0px;
 }

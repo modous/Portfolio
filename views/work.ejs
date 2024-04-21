@@ -1,9 +1,25 @@
 <%- include('./partials/head') %>
 
 <section class="image-container">
-  <h1>My todo app:</h1>
-  <img class="work" src="<%= people[0].project1.url %>" alt="" />
-  <img src="<%= people[0].project1.url %>" alt="" />
+  <h1>
+    These are some of my school and work projects, the rest you can find in my
+    <a href="https://github.com/modous" target="_blank">github!</a>
+  </h1>
+
+  <article>
+    <h2 class="work-title">My todo app:</h2>
+    <img class="work" src="<%= people[0].project1.url %>" alt="" />
+  </article>
+
+  <article>
+    <h2 class="work-title">My we love web app:</h2>
+    <img class="work" src="<%= people[0].project2.url %>" alt="" />
+  </article>
+
+  <article>
+    <h2 class="work-title">My FDND Squad page app:</h2>
+    <img class="work" src="<%= people[0].project3.url %>" alt="" />
+  </article>
 </section>
 
 <%- include('./partials/foot') %>

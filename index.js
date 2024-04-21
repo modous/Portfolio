@@ -87,6 +87,12 @@ app.get("/work", async function (_, res) {
           project1 {
             url
           }
+          project2 {
+            url
+          }
+          project3 {
+            url
+          }
         }
       }
     `;
