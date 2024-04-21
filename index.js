@@ -50,6 +50,9 @@ app.get("/", async function (_, res) {
           image {
             url
           }
+          project1 {
+            url
+          }
         }
       }
     `;
@@ -57,7 +60,6 @@ app.get("/", async function (_, res) {
     const { people } = await client.request(query);
 
     res.render("index", { people });
-    console.log(people);
   } catch (error) {
     console.error("Error fetching data:", error);
     // Handle the error appropriately, perhaps render an error page
@@ -65,10 +67,39 @@ app.get("/", async function (_, res) {
   }
 });
 
-// Create a POST route for the index
-app.post("/", function (request, response) {
-  // There is no POST handling yet, redirect to GET on /
-  response.redirect(303, "/");
+// Create a GET route for the work page
+app.get("/work", async function (_, res) {
+  try {
+    const query = `
+      {
+        people {
+          fullname
+          age
+          birthdate
+          id
+          title
+          aboutMe {
+            text
+          }
+          image {
+            url
+          }
+          project1 {
+            url
+          }
+        }
+      }
+    `;
+
+    const { people } = await client.request(query);
+
+    // Render the 'work' template and pass the 'people' object to the 'head.ejs' partial
+    res.render("work", { people });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    // Handle the error appropriately, perhaps render an error page
+    res.status(500).send("Error fetching data");
+  }
 });
 
 // Set the port number for express to listen on
