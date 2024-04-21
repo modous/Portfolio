@@ -1,0 +1,14 @@
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horizontally center the images */
+  align-items: center; /* Vertically center the images */
+  padding: 50px;
+}
+
+/* Ensure images do not exceed their container width */
+.work,
+img {
+  max-width: 100%;
+  padding-bottom: 50px;
+}
