@@ -8,15 +8,24 @@
   margin: 0px;
 }
 
-/* Ensure images do not exceed their container width */
 .work,
 img {
-  max-width: 100%;
-  padding-bottom: 50px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  display: block; /* Ensure the images are displayed as blocks */
+  margin: 0 auto; /* Center the images horizontally */
+}
+
+.work:hover,
+img:hover {
+  transform: scale(1.05);
 }
 
 .work-title {
   padding-top: 50px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
