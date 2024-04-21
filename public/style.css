@@ -4,9 +4,8 @@
 }
 
 main {
-  padding-left: 25px;
-  padding-right: 25px;
   overflow: hidden;
+  padding: 0px;
 }
 .h1-name {
   color: rgb(255, 255, 253);
@@ -76,13 +75,13 @@ section {
 .my-button:hover {
   background-color: #000000;
   color: white;
-  transform: scale(1.05); /* Increase the size of the button on hover */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .my-button:active {
-  transform: scale(0.95); /* Decrease the size of the button when clicked */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow when clicked */
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .copyright {
@@ -116,11 +115,5 @@ section {
   .h1-name {
     padding-top: 30px;
     margin-top: 0px;
-  }
-}
-
-@media screen and (max-width: 435px) {
-  main {
-    padding: 0;
   }
 }
