@@ -14,8 +14,9 @@ img {
   height: auto;
   border-radius: 10px;
   transition: transform 0.5s ease;
-  display: block; /* Ensure the images are displayed as blocks */
-  margin: 0 auto; /* Center the images horizontally */
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .work:hover,
