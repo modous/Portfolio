@@ -1,11 +1,18 @@
 <%- include('./partials/head') %>
-<main>
-  <article>
-    <h1><%= people[0].fullname %></h1>
-    <p><%= people[0].birthdate %></p>
-    <p><%= people[0].title %></p>
-    <p><%= people[0].aboutMe.text %></p>
-    <img src=" <%= people[0].image.url %>" alt="" />
-  </article>
+
+  <section class="about-me-container">
+    <article class="title">
+      <p><%= people[0].title %></p>
+    </article>
+
+    <article class="about-me">
+      <p><%= people[0].aboutMe.text %></p>
+      <a href="/work"><button class="my-button">My work</button></a>
+      
+    </article>
+  </section>
+
+
+  
 </main>
 <%- include('./partials/foot') %>

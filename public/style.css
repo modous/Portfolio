@@ -1,0 +1,119 @@
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  overflow: hidden;
+  padding: 0px;
+}
+.h1-name {
+  color: rgb(255, 255, 253);
+}
+
+.header-name {
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.header-name:hover {
+  transform: scale(1.1);
+}
+
+.header {
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 27px;
+  color: rgb(253, 255, 230);
+  max-width: 300px;
+  padding-bottom: 20px;
+}
+
+.about-me-container {
+  padding-left: 20px;
+}
+.about-me {
+  font-size: 18px;
+  color: rgb(253, 255, 230);
+  max-width: 500px;
+}
+
+.social-links {
+  padding: 20px;
+}
+
+.link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.4);
+}
+
+section {
+  padding-bottom: 20px;
+}
+
+.my-button {
+  color: #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.my-button:hover {
+  background-color: #000000;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.my-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copyright {
+  text-align: right;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .copyright {
+    font-size: 12px;
+    bottom: 5px;
+    left: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    display: block;
+  }
+  .header {
+    display: block;
+  }
+  .social-links {
+    padding: 10px;
+  }
+  .h1-name {
+    padding-top: 30px;
+    margin-top: 0px;
+  }
+}
