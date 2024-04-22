@@ -8,9 +8,7 @@ const path = require("path"); // Import the path module
 // Create a new express app
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+app.get("/", (req, res) => res.send("hello world"));
 
 // // Serve static files from the 'public' directory
 // app.use(express.static(path.join(__dirname, "public")));
