@@ -31,6 +31,7 @@ const client = new AwesomeGraphQLClient({
 });
 
 // Set ejs as the template engine
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
 // Create a GET route for the index
