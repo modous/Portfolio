@@ -71,3 +71,9 @@ img:hover {
     max-width: 100%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .image-container {
+    padding: 20px;
+  }
+}
