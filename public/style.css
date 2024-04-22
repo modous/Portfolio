@@ -4,8 +4,9 @@
 }
 
 main {
+  padding-left: 20px;
   overflow: hidden;
-  padding: 0px;
+  /* padding: 0px; */
 }
 .h1-name {
   color: rgb(255, 255, 253);
@@ -115,5 +116,8 @@ section {
   .h1-name {
     padding-top: 30px;
     margin-top: 0px;
+  }
+  main {
+    padding-left: 0px;
   }
 }
