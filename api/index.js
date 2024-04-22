@@ -51,6 +51,9 @@ app.get("/", async function (_, res) {
           image {
             url
           }
+          image2 {
+            url
+          }
           project1 {
             url
           }

@@ -7,9 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
   background-color: rgb(245, 245, 245);
-  margin: 0px;
 }
 
 .work,
@@ -66,13 +64,21 @@ img:hover {
   margin-bottom: 40px;
 }
 
+.copyright-work {
+  text-align: right;
+  position: relative;
+  right: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
 @media screen and (max-width: 500px) {
   .work-article {
     max-width: 100%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 860px) {
   .image-container {
     padding: 20px;
   }
