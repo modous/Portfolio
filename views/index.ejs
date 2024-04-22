@@ -1,18 +1,19 @@
 <%- include('./partials/head') %>
 
-  <section class="about-me-container">
-    <article class="title">
-      <p><%= people[0].title %></p>
-    </article>
+<section class="profile-picture">
+  <img src="<%= people[0].image2.url %>" alt="Your selfie" />
+</section>
 
-    <article class="about-me">
-      <p><%= people[0].aboutMe.text %></p>
-      <a href="/work"><button class="my-button">My work</button></a>
-      
-    </article>
-  </section>
+<section class="about-me-container">
+  <article class="title">
+    <p><%= people[0].title %></p>
+  </article>
 
+  <article class="about-me">
+    <p><%= people[0].aboutMe.text %></p>
+    <a href="/work"><button class="my-button">My work</button></a>
+  </article>
+</section>
 
-  
-</main>
+<p class="copyright">© Mohamed Taissate. All rights reserved</p>
 <%- include('./partials/foot') %>
