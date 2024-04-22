@@ -51,6 +51,9 @@ app.get("/", async function (_, res) {
           image {
             url
           }
+          image2 {
+            url
+          }
           project1 {
             url
           }
@@ -107,6 +110,11 @@ app.get("/work", async function (_, res) {
     // Handle the error appropriately, perhaps render an error page
     res.status(500).send("Error fetching data");
   }
+});
+
+// Create a route for going back to the home page
+app.get("/goback", function (req, res) {
+  res.redirect("/");
 });
 
 // Set the port number for express to listen on

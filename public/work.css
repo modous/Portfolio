@@ -7,9 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
   background-color: rgb(245, 245, 245);
-  margin: 0px;
 }
 
 .work,
@@ -66,14 +64,44 @@ img:hover {
   margin-bottom: 40px;
 }
 
+.copyright-work {
+  text-align: right;
+  position: relative;
+  right: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+.goback-btn {
+  background-color: #040409;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  padding: 15px 30px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.goback-btn:hover {
+  background-color: #ff0505;
+}
+
 @media screen and (max-width: 500px) {
   .work-article {
     max-width: 100%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 860px) {
   .image-container {
     padding: 20px;
+  }
+  .goback-btn {
+    margin: 0;
   }
 }
