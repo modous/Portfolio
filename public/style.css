@@ -9,6 +9,7 @@ main {
 }
 .h1-name {
   color: rgb(255, 255, 253);
+  padding-top: 20px;
   padding-left: 20px;
 }
 
@@ -43,7 +44,12 @@ main {
   max-width: 500px;
 }
 
+.about-me-text {
+  padding-bottom: 20px;
+}
+
 .social-links {
+  display: flex;
   padding: 20px;
 }
 
@@ -53,7 +59,7 @@ main {
 }
 
 .link:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 
 section {
@@ -96,11 +102,16 @@ section {
 }
 
 .profile-picture {
-  display: none;
+  /* display: block; */
+  margin: 0px;
   width: 200px;
-  height: 200px; 
-  border-radius: 20px;
-  overflow: hidden; 
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-picture-container {
+  padding-left: 40px;
 }
 
 /* Media query for responsiveness */
@@ -119,7 +130,8 @@ section {
   }
   .social-links {
     padding: 0px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .h1-name {
     padding-top: 30px;
@@ -131,11 +143,10 @@ section {
     padding-right: 20px;
     font-size: 8px;
   }
-  .profile-picture {
-    display: block;
-  }
   .background {
-    z-index: 1;
     background-color: #000000;
+  }
+  .profile-picture-container {
+    padding-left: 20px;
   }
 }
