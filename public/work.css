@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background-color);
 }
 
 .work,
@@ -28,8 +28,8 @@ img:hover {
 
 .work-title {
   color: white;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -48,6 +48,11 @@ img:hover {
   background-color: #423ae4;
   color: rgb(255, 255, 255);
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Github-link:focus {
+  outline: 2px solid rgb(247, 23, 206);
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.3);
 }
 
 .h1-work {
@@ -71,7 +76,7 @@ img:hover {
   padding-bottom: 10px;
   font-size: 14px;
   color: #999;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background-color);
 }
 
 .goback-btn {
@@ -91,6 +96,11 @@ img:hover {
 
 .goback-btn:hover {
   background-color: #ff0505;
+}
+
+.goback-btn:focus {
+  outline: 2px solid rgb(247, 23, 206);
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.3);
 }
 
 @media screen and (max-width: 500px) {

@@ -1,6 +1,11 @@
 :root {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  --main-color: rgb(255, 255, 255);
+  --secondary-color: rgb(253, 255, 230);
+  --background-color: rgb(245, 245, 245);
+  --details-color: rgb(0, 0, 0);
 }
 
 main {
@@ -8,7 +13,7 @@ main {
   padding: 0px;
 }
 .h1-name {
-  color: rgb(255, 255, 253);
+  color: var(--main-color);
   padding-top: 20px;
   padding-left: 20px;
 }
@@ -22,6 +27,11 @@ main {
   transform: scale(1.1);
 }
 
+.header-name:focus {
+  outline: 2px solid rgb(247, 23, 206);
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.3);
+}
+
 .header {
   padding-left: 20px;
   display: flex;
@@ -30,8 +40,8 @@ main {
 
 .title {
   font-size: 27px;
-  color: rgb(253, 255, 230);
-  max-width: 300px;
+  color: var(--secondary-color);
+  max-width: 400px;
   padding-bottom: 20px;
 }
 
@@ -40,7 +50,7 @@ main {
 }
 .about-me {
   font-size: 18px;
-  color: rgb(253, 255, 230);
+  color: var(--secondary-color);
   max-width: 500px;
 }
 
@@ -55,6 +65,7 @@ main {
 
 .link {
   text-decoration: none;
+  margin: 1px;
   transition: transform 0.3s ease;
 }
 
@@ -62,26 +73,32 @@ main {
   transform: scale(1.1);
 }
 
+.link:focus {
+  outline: 2px solid rgb(247, 23, 206);
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.3);
+}
+
 section {
   padding-bottom: 20px;
 }
 
 .my-button {
-  color: #000000;
+  color: var(--details-color);
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #ffffff;
+  background-color: var(--main-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   float: right;
+  text-decoration: none;
 }
 
 .my-button:hover {
-  background-color: #000000;
-  color: white;
+  background-color: var(--details-color);
+  color: var(--main-color);
   transform: scale(1.05);
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
@@ -89,6 +106,11 @@ section {
 .my-button:active {
   transform: scale(0.95);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.my-button:focus {
+  outline: 2px solid rgb(247, 23, 206);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.3);
 }
 
 .copyright {
@@ -142,7 +164,7 @@ section {
     font-size: 8px;
   }
   .background {
-    background-color: #000000;
+    background-color: var(--details-color);
   }
   .profile-picture-container {
     padding-left: 20px;
