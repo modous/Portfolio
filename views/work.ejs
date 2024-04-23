@@ -1,38 +1,40 @@
 <%- include('./partials/head') %>
+<section class="work-page-container">
+  <a class="goback-btn" href="/goback">Go Back</a>
+  <section class="image-container">
+    <article>
+      <h1 class="h1-work">
+        These are some of my school and work projects, the rest you can find in
+        my
+        <a class="Github-link" href="https://github.com/modous" target="_blank"
+          >Github!</a
+        >
+      </h1>
+    </article>
 
-<section class="image-container">
-  <a href="/goback"> <button class="goback-btn">Go Back</button></a>
-  <article>
-    <h1 class="h1-work">
-      These are some of my school and work projects, the rest you can find in my
-      <a class="Github-link" href="https://github.com/modous" target="_blank"
-        >Github!</a
-      >
-    </h1>
-  </article>
+    <article class="work-article">
+      <h2 class="work-title">My todo app</h2>
+      <a href="https://github.com/modous/Todo-challenge" target="_blank"
+        ><img class="work" src="<%= people[0].project1.url %>" alt=""
+      /></a>
+    </article>
 
-  <article class="work-article">
-    <h2 class="work-title">My todo app</h2>
-    <a href="https://github.com/modous/Todo-challenge" target="_blank"
-      ><img class="work" src="<%= people[0].project1.url %>" alt=""
-    /></a>
-  </article>
+    <article class="work-article">
+      <h2 class="work-title">My we love web app</h2>
+      <a href="https://github.com/modous/i-love-web-app" target="_blank"
+        ><img class="work" src="<%= people[0].project2.url %>" alt=""
+      /></a>
+    </article>
 
-  <article class="work-article">
-    <h2 class="work-title">My we love web app</h2>
-    <a href="https://github.com/modous/i-love-web-app" target="_blank"
-      ><img class="work" src="<%= people[0].project2.url %>" alt=""
-    /></a>
-  </article>
-
-  <article class="work-article">
-    <h2 class="work-title">My FDND Squad page app</h2>
-    <a
-      href="https://github.com/modous/connect-your-tribe-squad-page"
-      target="_blank"
-      ><img class="work" src="<%= people[0].project3.url %>" alt=""
-    /></a>
-  </article>
+    <article class="work-article">
+      <h2 class="work-title">My FDND Squad page app</h2>
+      <a
+        href="https://github.com/modous/connect-your-tribe-squad-page"
+        target="_blank"
+        ><img class="work" src="<%= people[0].project3.url %>" alt=""
+      /></a>
+    </article>
+  </section>
 </section>
 <p class="copyright-work">© Mohamed Taissate. All rights reserved</p>
 

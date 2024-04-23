@@ -2,12 +2,16 @@ body {
   padding-left: 0px;
 }
 
+.work-page-container {
+  background-color: var(--background-color);
+}
+
 .image-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background-color);
 }
 
 .work,
@@ -28,8 +32,8 @@ img:hover {
 
 .work-title {
   color: white;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -48,6 +52,11 @@ img:hover {
   background-color: #423ae4;
   color: rgb(255, 255, 255);
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Github-link:focus {
+  outline: 2px solid rgb(247, 23, 206);
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.3);
 }
 
 .h1-work {
@@ -71,13 +80,14 @@ img:hover {
   padding-bottom: 10px;
   font-size: 14px;
   color: #999;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background-color);
 }
 
 .goback-btn {
   background-color: #040409;
   border: none;
   color: white;
+  margin-left: 40px;
   margin-top: 20px;
   padding: 15px 30px;
   text-align: left;
@@ -93,6 +103,11 @@ img:hover {
   background-color: #ff0505;
 }
 
+.goback-btn:focus {
+  outline: 2px solid rgb(247, 23, 206);
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.3);
+}
+
 @media screen and (max-width: 500px) {
   .work-article {
     max-width: 100%;
@@ -104,6 +119,6 @@ img:hover {
     padding: 20px;
   }
   .goback-btn {
-    margin: 0;
+    margin: 20px;
   }
 }
