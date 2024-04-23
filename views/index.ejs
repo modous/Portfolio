@@ -1,7 +1,11 @@
 <%- include('./partials/head') %>
 
-<section class="profile-picture">
-  <img src="<%= people[0].image2.url %>" alt="Your selfie" />
+<section class="profile-picture-container">
+  <img
+    class="profile-picture"
+    src="<%= people[0].image2.url %>"
+    alt="Your selfie"
+  />
 </section>
 
 <section class="about-me-container">
@@ -10,10 +14,11 @@
   </article>
 
   <article class="about-me">
-    <p><%= people[0].aboutMe.text %></p>
+    <p class="about-me-text"><%= people[0].aboutMe.text %></p>
     <a href="/work"><button class="my-button">My work</button></a>
   </article>
 </section>
 
 <p class="copyright">© Mohamed Taissate. All rights reserved</p>
+
 <%- include('./partials/foot') %>

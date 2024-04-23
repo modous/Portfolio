@@ -112,6 +112,11 @@ app.get("/work", async function (_, res) {
   }
 });
 
+// Create a route for going back to the home page
+app.get("/goback", function (req, res) {
+  res.redirect("/");
+});
+
 // Set the port number for express to listen on
 app.set("port", process.env.PORT || 8000);
 

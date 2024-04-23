@@ -9,6 +9,7 @@ main {
 }
 .h1-name {
   color: rgb(255, 255, 253);
+  padding-top: 20px;
   padding-left: 20px;
 }
 
@@ -43,7 +44,12 @@ main {
   max-width: 500px;
 }
 
+.about-me-text {
+  padding-bottom: 20px;
+}
+
 .social-links {
+  display: flex;
   padding: 20px;
 }
 
@@ -53,7 +59,7 @@ main {
 }
 
 .link:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 
 section {
@@ -70,6 +76,7 @@ section {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  float: right;
 }
 
 .my-button:hover {
@@ -85,28 +92,30 @@ section {
 }
 
 .copyright {
-  text-align: center;
-  position: relative;
-  padding-top: 120px;
-  margin: 0px;
-  bottom: 10px;
-
+  text-align: right;
+  padding-top: 100px;
+  padding-right: 20px;
+  padding-bottom: 10px;
   font-size: 14px;
   color: #999;
 }
 
 .profile-picture {
-  display: none;
+  object-fit: cover;
+  margin: 0px;
   width: 200px;
-  height: 200px; /* Adjust height as needed */
-  border-radius: 20px; /* Makes the div rounded */
-  overflow: hidden; /* Ensures the image doesn't protrude beyond the rounded border */
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profile-picture-container {
+  padding-left: 40px;
 }
 
 /* Media query for responsiveness */
 @media screen and (max-width: 768px) {
   .copyright {
-    font-size: 12px;
+    padding-right: 10px;
   }
 }
 
@@ -119,7 +128,8 @@ section {
   }
   .social-links {
     padding: 0px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .h1-name {
     padding-top: 30px;
@@ -131,11 +141,10 @@ section {
     padding-right: 20px;
     font-size: 8px;
   }
-  .profile-picture {
-    display: block;
-  }
   .background {
-    z-index: 1;
     background-color: #000000;
+  }
+  .profile-picture-container {
+    padding-left: 20px;
   }
 }

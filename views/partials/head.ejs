@@ -6,6 +6,7 @@
     <title>Mohamed Portfolio</title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/work.css" />
+    <link rel="stylesheet" href="/reset.css" />
     <!-- Font Awesome CSS -->
     <link
       rel="stylesheet"
@@ -16,16 +17,16 @@
     />
     <style>
       /* Dynamic CSS */
+      /* @media screen and (min-width: 600px) { */
       .background {
         position: relative;
         background-image: url("<%= people[0].image.url %>");
 
         background-size: cover;
         background-repeat: no-repeat;
-        height: 110vh;
-        padding: 0px;
         margin: 0px;
       }
+      /* } */
 
       /* Pseudo-element to create semi-transparent background */
       .background {
@@ -42,6 +43,12 @@
         background-color: rgba(0, 0, 0, 0.5);
         z-index: -1;
       }
+
+      /* @media screen and (max-width: 400px) {
+        .background {
+          background-color: rgb(205, 18, 18);
+        }
+      } */
     </style>
   </head>
   <body class="background">
@@ -115,4 +122,6 @@
           </a>
         </div>
       </header>
-    
+    </main>
+  </body>
+</html>
