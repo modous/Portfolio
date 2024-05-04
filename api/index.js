@@ -54,9 +54,6 @@ app.get("/", async function (_, res) {
           image2 {
             url
           }
-          project1 {
-            url
-          }
         }
       }
     `;
@@ -74,37 +71,40 @@ app.get("/", async function (_, res) {
 // Create a GET route for the work page
 app.get("/work", async function (_, res) {
   try {
-    const query = `
-      {
-        people {
-          fullname
-          age
-          birthdate
-          id
-          title
-          aboutMe {
-            text
-          }
-          image {
-            url
-          }
-          project1 {
-            url
-          }
-          project2 {
-            url
-          }
-          project3 {
-            url
-          }
+    // Fetch projects data
+    const projectQuery = `
+    {
+      projects {
+        title
+        url
+        image {
+          url
         }
       }
+    }
     `;
 
-    const { people } = await client.request(query);
+    const { projects } = await client.request(projectQuery);
 
-    // Render the 'work' template and pass the 'people' object to the 'head.ejs' partial
-    res.render("work", { people });
+    // Fetch people data
+    const peopleQuery = `
+    {
+      people {
+        fullname
+        image {
+          url
+        }
+        image2 {
+          url
+        }
+      }
+    }
+    `;
+
+    const { people } = await client.request(peopleQuery);
+
+    // Render the 'work' template and pass both 'projects' and 'people' objects
+    res.render("work", { projects, people });
   } catch (error) {
     console.error("Error fetching data:", error);
     // Handle the error appropriately, perhaps render an error page
